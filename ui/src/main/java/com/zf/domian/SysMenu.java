@@ -8,18 +8,13 @@ import javax.persistence.*;
  * @author zf
  * @date 16/3/12
  */
-@Entity
-@Table(name = "sys_menu", schema = "", catalog = "wholesale")
 public class SysMenu {
-    @Id
-    @GeneratedValue()
     private int menuId;
     private String menuName;
     private String menuUrl;
     private String parentId;
     private String menuOrder;
     private String menuIcon;
-    private String menuType;
 
     public int getMenuId() {
         return menuId;
@@ -69,13 +64,6 @@ public class SysMenu {
         this.menuIcon = menuIcon;
     }
 
-    public String getMenuType() {
-        return menuType;
-    }
-
-    public void setMenuType(String menuType) {
-        this.menuType = menuType;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -90,7 +78,6 @@ public class SysMenu {
         if (parentId != null ? !parentId.equals(sysMenu.parentId) : sysMenu.parentId != null) return false;
         if (menuOrder != null ? !menuOrder.equals(sysMenu.menuOrder) : sysMenu.menuOrder != null) return false;
         if (menuIcon != null ? !menuIcon.equals(sysMenu.menuIcon) : sysMenu.menuIcon != null) return false;
-        if (menuType != null ? !menuType.equals(sysMenu.menuType) : sysMenu.menuType != null) return false;
 
         return true;
     }
@@ -103,7 +90,6 @@ public class SysMenu {
         result = 31 * result + (parentId != null ? parentId.hashCode() : 0);
         result = 31 * result + (menuOrder != null ? menuOrder.hashCode() : 0);
         result = 31 * result + (menuIcon != null ? menuIcon.hashCode() : 0);
-        result = 31 * result + (menuType != null ? menuType.hashCode() : 0);
         return result;
     }
 }

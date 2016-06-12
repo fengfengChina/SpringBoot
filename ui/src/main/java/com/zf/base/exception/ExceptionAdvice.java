@@ -18,8 +18,8 @@ import java.util.logging.Logger;
  * @author zf
  * @date 16/3/21
  */
-//@ControllerAdvice
-//@ResponseBody
+@ControllerAdvice
+@ResponseBody
 public class ExceptionAdvice {
     Logger logger = Logger.getGlobal();
 
