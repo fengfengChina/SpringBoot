@@ -29,6 +29,13 @@ import java.sql.SQLException;
 @org.springframework.context.annotation.Configuration
 public class MyBatisConfig {
     private static final Logger logger = LoggerFactory.getLogger(MyBatisConfig.class);
-
+    @Bean
+    public DataSource createDataSource() throws SQLException {
+        return DataSourceBuilder.create(Thread.currentThread().getContextClassLoader())
+                .driverClassName("com.mysql.jdbc.Driver")
+                .url("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&connectTimeout=60000&socketTimeout=60000&autoReconnect=true&autoReconnectForPools=true&failOverReadOnly=false&useSSL=false")
+                .username("root")
+                .password("root").build();
+    }
 
 }

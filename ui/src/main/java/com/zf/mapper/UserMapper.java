@@ -13,6 +13,6 @@ public interface UserMapper {
 
     SysUser selectUser(String username);
 
-    @Select("SELECT * FROM sys_user where id = #{id}")
-    SysUser selectUserName(@Param("state") String state);
+    @Select("SELECT * FROM sys_user where user_name = #{userName}")
+    SysUser selectUserName(@Param("userName") String userName);
 }

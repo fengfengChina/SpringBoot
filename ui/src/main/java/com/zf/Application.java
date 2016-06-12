@@ -61,6 +61,6 @@ public class Application implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         /** 检验数据库配置是否成功 */
-//        System.out.println(this.userMapper.selectUserName("15815800670"));
+        System.out.println("--------"+this.userMapper.selectUserName("15815800670"));
     }
 }
