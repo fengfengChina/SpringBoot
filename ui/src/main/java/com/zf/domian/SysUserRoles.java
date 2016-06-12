@@ -5,7 +5,7 @@ package com.zf.domian;
  * @author zf
  * @date 16/6/12
  */
-public class UserRoles {
+public class SysUserRoles {
     private Integer userRolesId;
     /**
      * 用户id
