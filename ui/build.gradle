@@ -33,11 +33,11 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
     compile fileTree(dir: 'lib', includes: ['*.jar'])
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-devtools'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'org.springframework.boot:spring-boot-starter-redis'
     compile 'org.springframework.session:spring-session:1.2.0.RELEASE'
@@ -45,7 +45,6 @@ dependencies {
     /** 配置mybatis 数据源  */
     compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1")
     testCompile 'org.springframework.boot:spring-boot-starter-test'
-
 }
 task wrapper(type: Wrapper) {
     gradleVersion = '2.4'

@@ -1,6 +1,5 @@
 package com.zf.config;
 
-import com.zf.mapper.UserMapper;
 import org.apache.ibatis.datasource.DataSourceFactory;
 import org.apache.ibatis.datasource.jndi.JndiDataSourceFactory;
 import org.apache.ibatis.mapping.Environment;
