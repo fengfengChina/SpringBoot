@@ -1,19 +1,10 @@
-package com.zf.domian;
+package src/main/java/com/zf/domain;
 
-/**
- * 用户和角色的关联表：
- * @author zf
- * @date 16/6/12
- */
 public class SysUserRoles {
     private Integer userRolesId;
-    /**
-     * 用户id
-     */
+
     private Integer userId;
-    /**
-     * 权限id
-     */
+
     private Integer roleId;
 
     public Integer getUserRolesId() {
