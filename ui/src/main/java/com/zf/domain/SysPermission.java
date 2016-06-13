@@ -1,20 +1,8 @@
-package com.zf.domian;
+package src/main/java/com/zf/domain;
 
-import javax.persistence.*;
-
-/**
- * 权限
- * @author zf
- * @date 16/3/12
- */
 public class SysPermission {
-    /**
-     * 权限id
-     */
     private Integer permissionId;
-    /**
-     * 权限名称
-     */
+
     private String description;
 
     public Integer getPermissionId() {
@@ -30,6 +18,6 @@ public class SysPermission {
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.description = description == null ? null : description.trim();
     }
 }
