@@ -1,7 +1,10 @@
-package src/main/java/com/zf/dao;
+package com.zf.dao;
 
-import src/main/java/com/zf/domain.SysRole;
 
+import com.zf.domain.SysRole;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
 public interface SysRoleMapper {
     int deleteByPrimaryKey(Integer roleId);
 

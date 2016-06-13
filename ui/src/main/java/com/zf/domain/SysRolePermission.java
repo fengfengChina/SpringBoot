@@ -1,4 +1,4 @@
-package src/main/java/com/zf/domain;
+package com.zf.domain;
 
 public class SysRolePermission {
     private Integer rolePermissionId;

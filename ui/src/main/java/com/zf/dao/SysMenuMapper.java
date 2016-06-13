@@ -1,7 +1,9 @@
-package src/main/java/com/zf/dao;
+package com.zf.dao;
 
-import src/main/java/com/zf/domain.SysMenu;
+import com.zf.domain.SysMenu;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface SysMenuMapper {
     int deleteByPrimaryKey(Integer menuId);
 

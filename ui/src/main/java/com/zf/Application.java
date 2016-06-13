@@ -1,6 +1,5 @@
 package com.zf;
 
-import com.zf.mapper.UserMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +26,6 @@ public class Application implements CommandLineRunner {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
-    @Autowired
-    UserMapper userMapper;
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
@@ -60,7 +57,6 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        /** 检验数据库配置是否成功 */
-        System.out.println("--------"+this.userMapper.selectUserName("15815800670"));
+
     }
 }

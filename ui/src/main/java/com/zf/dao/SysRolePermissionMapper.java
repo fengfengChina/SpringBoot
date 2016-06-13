@@ -1,7 +1,8 @@
-package src/main/java/com/zf/dao;
+package com.zf.dao;
+import com.zf.domain.SysRolePermission;
+import org.apache.ibatis.annotations.Mapper;
 
-import src/main/java/com/zf/domain.SysRolePermission;
-
+@Mapper
 public interface SysRolePermissionMapper {
     int deleteByPrimaryKey(Integer rolePermissionId);
 
