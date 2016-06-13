@@ -4,5 +4,5 @@ base on spring framework.....use database .security . redis .spring mvc .spring 
 optional import to idea, `gradle idea`
 
 run: `gradle build & gradle bootRun`
-
-[百度](www.baidu.com)
+# backend bootstrap template
+[AdminLTE](https://github.com/almasaeed2010/AdminLTE)
