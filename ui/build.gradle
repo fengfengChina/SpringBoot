@@ -25,8 +25,8 @@ war {
 }
 
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 repositories {
     mavenLocal()
@@ -39,6 +39,9 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-devtools'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.springframework.boot:spring-boot-starter-redis'
+    compile 'org.springframework.session:spring-session:1.2.0.RELEASE'
+    compile "org.springframework.security.oauth:spring-security-oauth2"
     compile 'mysql:mysql-connector-java'
     /** 配置mybatis 数据源  */
     compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1")
