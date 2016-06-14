@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="src/main/java/com/zf/dao.SysUserRolesMapper" >
-  <resultMap id="BaseResultMap" type="src/main/java/com/zf/domain.SysUserRoles" >
+<mapper namespace="com.zf.dao.SysUserRolesMapper" >
+  <resultMap id="BaseResultMap" type="com.zf.domain.SysUserRoles" >
     <id column="user_roles_id" property="userRolesId" jdbcType="INTEGER" />
     <result column="user_id" property="userId" jdbcType="INTEGER" />
     <result column="role_id" property="roleId" jdbcType="INTEGER" />
@@ -19,13 +19,13 @@
     delete from sys_user_roles
     where user_roles_id = #{userRolesId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="src/main/java/com/zf/domain.SysUserRoles" >
+  <insert id="insert" parameterType="com.zf.domain.SysUserRoles" >
     insert into sys_user_roles (user_roles_id, user_id, role_id
       )
     values (#{userRolesId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="src/main/java/com/zf/domain.SysUserRoles" >
+  <insert id="insertSelective" parameterType="com.zf.domain.SysUserRoles" >
     insert into sys_user_roles
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="userRolesId != null" >
@@ -50,7 +50,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="src/main/java/com/zf/domain.SysUserRoles" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.zf.domain.SysUserRoles" >
     update sys_user_roles
     <set >
       <if test="userId != null" >
@@ -62,7 +62,7 @@
     </set>
     where user_roles_id = #{userRolesId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="src/main/java/com/zf/domain.SysUserRoles" >
+  <update id="updateByPrimaryKey" parameterType="com.zf.domain.SysUserRoles" >
     update sys_user_roles
     set user_id = #{userId,jdbcType=INTEGER},
       role_id = #{roleId,jdbcType=INTEGER}

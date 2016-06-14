@@ -1,8 +1,7 @@
 package com.zf.dao;
-import com.zf.domain.SysUser;
-import org.apache.ibatis.annotations.Mapper;
 
-@Mapper
+import com.zf.domain.SysUser;
+
 public interface SysUserMapper {
     int deleteByPrimaryKey(Integer usedId);
 

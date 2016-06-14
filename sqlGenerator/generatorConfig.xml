@@ -17,16 +17,16 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!--生成Model类存放位置-->
-        <javaModelGenerator targetPackage="src/main/java/com/zf/domain" targetProject="../ui/">
+        <javaModelGenerator targetPackage="com.zf.domain" targetProject="../ui/src/main/java/">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!--生成映射文件存放位置-->
-        <sqlMapGenerator targetPackage="src/main/resources/mapper" targetProject="../ui/">
+        <sqlMapGenerator targetPackage="mapper" targetProject="../ui/src/main/resources/">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!--生成Dao类存放位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="src/main/java/com/zf/dao" targetProject="../ui/">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zf.dao" targetProject="../ui/src/main/java/">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--生成对应表及类名-->

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 buildscript {
     repositories {
         jcenter()
@@ -50,3 +51,54 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.4'
 }
+=======
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.2.RELEASE")
+        //classpath 'org.springframework:springloaded:1.2.0.RELEASE'
+    }
+}
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'jetty'
+apply plugin: 'war'
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+war {
+    baseName = 'hd'
+}
+
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: 'lib', includes: ['*.jar'])
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-devtools'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'mysql:mysql-connector-java'
+    /** 配置mybatis 数据源  */
+    compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1")
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
+>>>>>>> origin/master

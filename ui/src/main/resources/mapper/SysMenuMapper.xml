@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="src/main/java/com/zf/dao.SysMenuMapper" >
-  <resultMap id="BaseResultMap" type="src/main/java/com/zf/domain.SysMenu" >
+<mapper namespace="com.zf.dao.SysMenuMapper" >
+  <resultMap id="BaseResultMap" type="com.zf.domain.SysMenu" >
     <id column="menu_id" property="menuId" jdbcType="INTEGER" />
     <result column="menu_url" property="menuUrl" jdbcType="VARCHAR" />
     <result column="parent_id" property="parentId" jdbcType="INTEGER" />
@@ -21,13 +21,13 @@
     delete from sys_menu
     where menu_id = #{menuId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="src/main/java/com/zf/domain.SysMenu" >
+  <insert id="insert" parameterType="com.zf.domain.SysMenu" >
     insert into sys_menu (menu_id, menu_url, parent_id, 
       menu_order, menu_icon)
     values (#{menuId,jdbcType=INTEGER}, #{menuUrl,jdbcType=VARCHAR}, #{parentId,jdbcType=INTEGER}, 
       #{menuOrder,jdbcType=INTEGER}, #{menuIcon,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="src/main/java/com/zf/domain.SysMenu" >
+  <insert id="insertSelective" parameterType="com.zf.domain.SysMenu" >
     insert into sys_menu
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="menuId != null" >
@@ -64,7 +64,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="src/main/java/com/zf/domain.SysMenu" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.zf.domain.SysMenu" >
     update sys_menu
     <set >
       <if test="menuUrl != null" >
@@ -82,7 +82,7 @@
     </set>
     where menu_id = #{menuId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="src/main/java/com/zf/domain.SysMenu" >
+  <update id="updateByPrimaryKey" parameterType="com.zf.domain.SysMenu" >
     update sys_menu
     set menu_url = #{menuUrl,jdbcType=VARCHAR},
       parent_id = #{parentId,jdbcType=INTEGER},

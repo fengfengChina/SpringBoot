@@ -1,9 +1,7 @@
 package com.zf.dao;
 
 import com.zf.domain.SysMenu;
-import org.apache.ibatis.annotations.Mapper;
 
-@Mapper
 public interface SysMenuMapper {
     int deleteByPrimaryKey(Integer menuId);
 
