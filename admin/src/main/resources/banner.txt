@@ -1,0 +1,26 @@
+
+${AnsiColor.GREEN}
+${AnsiColor.GREEN}                 _ooOoo_
+${AnsiColor.GREEN}                o8888888o
+${AnsiColor.GREEN}                88" . "88
+${AnsiColor.GREEN}                (| -_- |)
+${AnsiColor.GREEN}                O\  =  /O
+${AnsiColor.GREEN}             ____/`---'\____
+${AnsiColor.GREEN}           .'  \\|     |//  `.
+${AnsiColor.GREEN}          /  \\|||  :  |||//  \
+${AnsiColor.GREEN}         /  _||||| -:- |||||-  \
+${AnsiColor.GREEN}         |   | \\\  -  /// |   |
+${AnsiColor.GREEN}         | \_|  ''\---/''  |   |
+${AnsiColor.GREEN}         \  .-\__  `-`  ___/-. /
+${AnsiColor.GREEN}       ___`. .'  /--.--\  `. . __
+${AnsiColor.GREEN}    ."" '<  `.___\_<|>_/___.'  >'"".
+${AnsiColor.GREEN}   | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+${AnsiColor.GREEN}   \  \ `-.   \_ __\ /__ _/   .-` /  /
+${AnsiColor.GREEN} ======`-.____`-.___\_____/___.-`____.-'======
+${AnsiColor.GREEN}                 `=---='
+${AnsiColor.GREEN} ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+${AnsiColor.GREEN}           佛祖保佑       永无BUG
+
+
+
+${AnsiColor.BRIGHT_BLUE}:: zf-framework 🤓  :: Running Spring Boot ${spring-boot.version} ::

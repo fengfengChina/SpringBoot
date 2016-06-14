@@ -1,5 +1,8 @@
 package com.zf.config;
 
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
+
+
 import org.apache.ibatis.datasource.DataSourceFactory;
 import org.apache.ibatis.datasource.jndi.JndiDataSourceFactory;
 import org.apache.ibatis.mapping.Environment;
@@ -36,5 +39,4 @@ public class MyBatisConfig {
                 .username("root")
                 .password("root").build();
     }
-
 }
