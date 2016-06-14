@@ -21,8 +21,6 @@ import java.util.Arrays;
 import javax.servlet.MultipartConfigElement;
 
 @SpringBootApplication
-@EnableCaching
-@EnableTransactionManagement
 public class Application implements CommandLineRunner {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
@@ -43,7 +41,7 @@ public class Application implements CommandLineRunner {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**").allowedOrigins("http://localhost");
+                registry.addMapping("/**").allowedOrigins("http://localhost");
             }
         };
     }
