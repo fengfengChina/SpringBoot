@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="src/main/java/com/zf/dao.SysPermissionMapper">
-  <resultMap id="BaseResultMap" type="src/main/java/com/zf/domain.SysPermission">
+<mapper namespace="com.zf.dao.SysPermissionMapper">
+  <resultMap id="BaseResultMap" type="com.zf.domain.SysPermission">
     <id column="permission_id" jdbcType="INTEGER" property="permissionId" />
     <result column="description" jdbcType="VARCHAR" property="description" />
   </resultMap>
@@ -18,11 +18,11 @@
     delete from sys_permission
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="src/main/java/com/zf/domain.SysPermission">
+  <insert id="insert" parameterType="com.zf.domain.SysPermission">
     insert into sys_permission (permission_id, description)
     values (#{permissionId,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="src/main/java/com/zf/domain.SysPermission">
+  <insert id="insertSelective" parameterType="com.zf.domain.SysPermission">
     insert into sys_permission
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="permissionId != null">
@@ -41,7 +41,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="src/main/java/com/zf/domain.SysPermission">
+  <update id="updateByPrimaryKeySelective" parameterType="com.zf.domain.SysPermission">
     update sys_permission
     <set>
       <if test="description != null">
@@ -50,12 +50,12 @@
     </set>
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="src/main/java/com/zf/domain.SysPermission">
+  <update id="updateByPrimaryKey" parameterType="com.zf.domain.SysPermission">
     update sys_permission
     set description = #{description,jdbcType=VARCHAR}
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </update>
-  <resultMap id="BaseResultMap" type="src/main/java/com/zf/domain.SysPermission">
+  <resultMap id="BaseResultMap" type="com.zf.domain.SysPermission">
     <id column="permission_id" jdbcType="INTEGER" property="permissionId" />
     <result column="description" jdbcType="VARCHAR" property="description" />
   </resultMap>
@@ -72,11 +72,11 @@
     delete from sys_permission
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="src/main/java/com/zf/domain.SysPermission">
+  <insert id="insert" parameterType="com.zf.domain.SysPermission">
     insert into sys_permission (permission_id, description)
     values (#{permissionId,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="src/main/java/com/zf/domain.SysPermission">
+  <insert id="insertSelective" parameterType="com.zf.domain.SysPermission">
     insert into sys_permission
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="permissionId != null">
@@ -95,7 +95,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="src/main/java/com/zf/domain.SysPermission">
+  <update id="updateByPrimaryKeySelective" parameterType="com.zf.domain.SysPermission">
     update sys_permission
     <set>
       <if test="description != null">
@@ -104,7 +104,7 @@
     </set>
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="src/main/java/com/zf/domain.SysPermission">
+  <update id="updateByPrimaryKey" parameterType="com.zf.domain.SysPermission">
     update sys_permission
     set description = #{description,jdbcType=VARCHAR}
     where permission_id = #{permissionId,jdbcType=INTEGER}

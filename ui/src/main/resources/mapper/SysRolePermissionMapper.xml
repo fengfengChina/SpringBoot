@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="src/main/java/com/zf/dao.SysRolePermissionMapper" >
-  <resultMap id="BaseResultMap" type="src/main/java/com/zf/domain.SysRolePermission" >
+<mapper namespace="com.zf.dao.SysRolePermissionMapper" >
+  <resultMap id="BaseResultMap" type="com.zf.domain.SysRolePermission" >
     <id column="role_permission_id" property="rolePermissionId" jdbcType="INTEGER" />
     <result column="roleId" property="roleid" jdbcType="INTEGER" />
     <result column="permission_id" property="permissionId" jdbcType="INTEGER" />
@@ -19,13 +19,13 @@
     delete from sys_role_permission
     where role_permission_id = #{rolePermissionId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="src/main/java/com/zf/domain.SysRolePermission" >
+  <insert id="insert" parameterType="com.zf.domain.SysRolePermission" >
     insert into sys_role_permission (role_permission_id, roleId, permission_id
       )
     values (#{rolePermissionId,jdbcType=INTEGER}, #{roleid,jdbcType=INTEGER}, #{permissionId,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="src/main/java/com/zf/domain.SysRolePermission" >
+  <insert id="insertSelective" parameterType="com.zf.domain.SysRolePermission" >
     insert into sys_role_permission
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="rolePermissionId != null" >
@@ -50,7 +50,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="src/main/java/com/zf/domain.SysRolePermission" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.zf.domain.SysRolePermission" >
     update sys_role_permission
     <set >
       <if test="roleid != null" >
@@ -62,7 +62,7 @@
     </set>
     where role_permission_id = #{rolePermissionId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="src/main/java/com/zf/domain.SysRolePermission" >
+  <update id="updateByPrimaryKey" parameterType="com.zf.domain.SysRolePermission" >
     update sys_role_permission
     set roleId = #{roleid,jdbcType=INTEGER},
       permission_id = #{permissionId,jdbcType=INTEGER}
