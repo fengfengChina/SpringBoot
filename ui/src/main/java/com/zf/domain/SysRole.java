@@ -1,5 +1,8 @@
 package com.zf.domain;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("SysRole")
 public class SysRole {
     private Integer roleId;
 

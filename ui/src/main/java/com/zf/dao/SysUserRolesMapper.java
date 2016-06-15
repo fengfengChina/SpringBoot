@@ -1,6 +1,7 @@
 package com.zf.dao;
 
 import com.zf.domain.SysUserRoles;
+import org.apache.ibatis.annotations.Mapper;
 
 public interface SysUserRolesMapper {
     int deleteByPrimaryKey(Integer userRolesId);
