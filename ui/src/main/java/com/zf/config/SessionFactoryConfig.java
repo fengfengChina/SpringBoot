@@ -7,9 +7,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
 import org.thymeleaf.expression.Lists;
 
 import javax.sql.DataSource;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +34,7 @@ public class SessionFactoryConfig {
     /**
      * mybatis mapper resource 路径
      */
-    private static String MAPPER_PATH = "classpath*:mapper/*.xml";
+    private static String MAPPER_PATH = "/mapper/**.xml";
 
     @Autowired
     private DataSource dataSource;
@@ -44,22 +48,17 @@ public class SessionFactoryConfig {
      * @return
      */
     @Bean
-    public SqlSessionFactoryBean createSqlSessionFactoryBean() {
+    public SqlSessionFactoryBean createSqlSessionFactoryBean() throws IOException {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        /** 设置mybatis configuration 扫描路径 */
         sqlSessionFactoryBean.setConfigLocation(new ClassPathResource(MYBATIS_CONFIG));
-        createResourceArray();
-        sqlSessionFactoryBean.setMapperLocations(createResourceArray());
+        /** 添加mapper 扫描路径 */
+        PathMatchingResourcePatternResolver pathMatchingResourcePatternResolver = new PathMatchingResourcePatternResolver();
+        String packageSearchPath = ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + MAPPER_PATH;
+        sqlSessionFactoryBean.setMapperLocations(pathMatchingResourcePatternResolver.getResources(packageSearchPath));
+        /** 设置datasource */
         sqlSessionFactoryBean.setDataSource(dataSource);
         return sqlSessionFactoryBean;
     }
 
-    /**
-     * 创建mapper资源路径
-     * @return
-     */
-    private Resource[] createResourceArray() {
-        List<Resource> resources = new ArrayList<>();
-        resources.add(new ClassPathXmlApplicationContext(MAPPER_PATH));
-        return resources.toArray(new Resource[1]);
-    }
 }
