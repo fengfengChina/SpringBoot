@@ -61,6 +61,5 @@ public class Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
         /**检验mybatis 配置是否成功 */
         System.out.print("-----------"+sysUserMapper.selectByPrimaryKey(1).getUserId());
-
     }
 }
