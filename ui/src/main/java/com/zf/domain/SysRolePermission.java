@@ -1,5 +1,8 @@
 package com.zf.domain;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("SysRolePermission")
 public class SysRolePermission {
     private Integer rolePermissionId;
 

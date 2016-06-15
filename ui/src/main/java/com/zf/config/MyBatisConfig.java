@@ -1,5 +1,8 @@
 package com.zf.config;
 
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
+import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 
 
@@ -16,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -29,6 +33,7 @@ import java.sql.SQLException;
  * @date 16/6/12
  */
 @Configuration
+@MapperScan("com.zf.dao")
 public class MyBatisConfig {
     private static final Logger logger = LoggerFactory.getLogger(MyBatisConfig.class);
     @Bean

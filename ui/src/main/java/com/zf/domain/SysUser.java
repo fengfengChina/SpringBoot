@@ -1,7 +1,10 @@
 package com.zf.domain;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("SysUser")
 public class SysUser {
-    private Integer usedId;
+    private Integer userId;
 
     private String userName;
 
@@ -17,12 +20,12 @@ public class SysUser {
 
     private Boolean activity;
 
-    public Integer getUsedId() {
-        return usedId;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUsedId(Integer usedId) {
-        this.usedId = usedId;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
