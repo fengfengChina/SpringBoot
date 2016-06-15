@@ -1,5 +1,7 @@
 package com.zf;
 
+import com.zf.dao.SysUserMapper;
+import com.zf.domain.SysUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,9 +55,12 @@ public class Application implements CommandLineRunner {
         factory.setMaxRequestSize("2097152KB");*/
         return factory.createMultipartConfig();
     }
-
+    @Autowired
+    SysUserMapper sysUserMapper;
     @Override
     public void run(String... args) throws Exception {
+        /**检验mybatis 配置是否成功 */
+        System.out.print("-----------"+sysUserMapper.selectByPrimaryKey(1).getUserId());
 
     }
 }
