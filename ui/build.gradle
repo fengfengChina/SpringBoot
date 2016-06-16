@@ -21,7 +21,7 @@ idea {
     }
 }
 war {
-    baseName = 'hd'
+    baseName = 'ui'
 }
 
 
