@@ -1,8 +1,9 @@
 package com.zf.controller;
 
 import com.zf.domain.User;
-import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
+//import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
@@ -20,7 +21,7 @@ public class GreetingController {
 
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/greeting")
+    @RequestMapping(value = "/greeting",method = RequestMethod.POST)
     public String greeting( Principal user) {
         return  ((User)user).getUserName();
     }
