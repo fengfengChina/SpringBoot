@@ -29,7 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         if (user != null) {
             throw new UsernameNotFoundException(String.format("User %s does not exist",phone));
         }
-        return new UserDetailsInfo(user);
+        return new CurrentUser(user);
     }
 
     private final static class UserDetailsInfo extends User implements UserDetails{
