@@ -5,19 +5,13 @@
     <id column="permission_id" jdbcType="INTEGER" property="permissionId" />
     <result column="description" jdbcType="VARCHAR" property="description" />
   </resultMap>
-  <sql id="Base_Column_List">
-    permission_id, description
-  </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from sys_permission
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from sys_permission
-    where permission_id = #{permissionId,jdbcType=INTEGER}
-  </delete>
+
   <insert id="insert" parameterType="com.zf.domain.SysPermission">
     insert into sys_permission (permission_id, description)
     values (#{permissionId,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR})
@@ -55,58 +49,13 @@
     set description = #{description,jdbcType=VARCHAR}
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </update>
-  <resultMap id="BaseResultMap" type="com.zf.domain.SysPermission">
-    <id column="permission_id" jdbcType="INTEGER" property="permissionId" />
-    <result column="description" jdbcType="VARCHAR" property="description" />
-  </resultMap>
+
   <sql id="Base_Column_List">
     permission_id, description
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from sys_permission
-    where permission_id = #{permissionId,jdbcType=INTEGER}
-  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from sys_permission
     where permission_id = #{permissionId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.zf.domain.SysPermission">
-    insert into sys_permission (permission_id, description)
-    values (#{permissionId,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.zf.domain.SysPermission">
-    insert into sys_permission
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="permissionId != null">
-        permission_id,
-      </if>
-      <if test="description != null">
-        description,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="permissionId != null">
-        #{permissionId,jdbcType=INTEGER},
-      </if>
-      <if test="description != null">
-        #{description,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zf.domain.SysPermission">
-    update sys_permission
-    <set>
-      <if test="description != null">
-        description = #{description,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where permission_id = #{permissionId,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.zf.domain.SysPermission">
-    update sys_permission
-    set description = #{description,jdbcType=VARCHAR}
-    where permission_id = #{permissionId,jdbcType=INTEGER}
-  </update>
+
 </mapper>
