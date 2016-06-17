@@ -2,6 +2,7 @@ package com.zf;
 
 import com.zf.dao.SysUserMapper;
 import com.zf.domain.SysUser;
+import com.zf.service.SysUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,10 +57,12 @@ public class Application implements CommandLineRunner {
         return factory.createMultipartConfig();
     }
     @Autowired
-    SysUserMapper sysUserMapper;
+    SysUserService sysUserService;
     @Override
     public void run(String... args) throws Exception {
         /**检验mybatis 配置是否成功 */
-        System.out.print("-----------"+sysUserMapper.selectByPrimaryKey(1).getUserId());
+        sysUserService.getSysUserId();
+        System.out.print("0000000000000");
+        System.out.print(sysUserService.getSysUserId());
     }
 }
