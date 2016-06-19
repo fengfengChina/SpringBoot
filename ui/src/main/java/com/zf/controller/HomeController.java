@@ -13,11 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class HomeController {
-
+    private String greetString = "{\"id\":1,\"content\":\"Hello, World!\"}";
     @RequestMapping(value = "/",method =  RequestMethod.POST)
     @ApiOperation(value="测试服务是否异常接口", notes="查看服务")
     public String home() {
         return "哈哈哈!你能正常访问了.";
+    }
+
+    @RequestMapping(value = "/greet")
+    public String geeting(){
+        return greetString;
     }
 
 }

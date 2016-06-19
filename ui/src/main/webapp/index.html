@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html ng-app="index">
 <head>
-	<title>Spring boot and thymeleaf</title>
+	<title>Hello AngularJS</title>
+	<script src="js/angular.js"></script>
+	<script src="index.js"></script>
 </head>
+
 <body>
-	<h3>index.html</h3>
-	<p>	index </p>
+<div ng-controller="hello">
+	<p>The ID is {{greeting.id}}</p>
+	<p>The content is {{greeting.content}}</p>
+</div>
 </body>
 </html>
