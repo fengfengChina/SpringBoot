@@ -2,7 +2,6 @@ package com.zf.domain;
 
 import org.apache.ibatis.type.Alias;
 
-@Alias("SysUserRoles")
 public class SysUserRoles {
     private Integer userRolesId;
 

@@ -2,7 +2,6 @@ package com.zf.domain;
 
 import org.apache.ibatis.type.Alias;
 
-@Alias("SysPermission")
 public class SysPermission {
     private Integer permissionId;
 
