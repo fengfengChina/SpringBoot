@@ -25,7 +25,6 @@ import java.util.List;
  */
 @Configuration
 public class SessionFactoryConfig {
-
     /**
      * mybatis 配置路径
      */
@@ -39,7 +38,7 @@ public class SessionFactoryConfig {
     @Autowired
     private DataSource dataSource;
 
-
+    private String typeAliasPackage = "com.zf.domain";
     /**
      * 创建sqlSessionFactoryBean 实例
      * 并且设置configtion 如驼峰命名.等等
@@ -58,6 +57,7 @@ public class SessionFactoryConfig {
         sqlSessionFactoryBean.setMapperLocations(pathMatchingResourcePatternResolver.getResources(packageSearchPath));
         /** 设置datasource */
         sqlSessionFactoryBean.setDataSource(dataSource);
+        sqlSessionFactoryBean.setTypeAliasesPackage(typeAliasPackage);
         return sqlSessionFactoryBean;
     }
 
