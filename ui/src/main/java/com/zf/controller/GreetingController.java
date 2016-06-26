@@ -21,7 +21,7 @@ public class GreetingController {
 
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(value = "/greeting",method = RequestMethod.POST)
+    @RequestMapping(value = "/greeting",method = RequestMethod.GET)
     public String greeting( Principal user) {
         return  ((User)user).getUserName();
     }

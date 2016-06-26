@@ -37,6 +37,7 @@ dependencies {
     compile fileTree(dir: 'lib', includes: ['*.jar'])
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-devtools'
+    compile 'org.springframework.boot:/etc/init.d/php-fpm start'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
 //    compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'org.springframework.boot:spring-boot-starter-redis'

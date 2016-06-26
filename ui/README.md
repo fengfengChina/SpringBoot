@@ -19,3 +19,6 @@ run: `gradle build & gradle bootRun`
 [angular资料](http://www.runoob.com/angularjs/angularjs-tutorial.html)
 [mybatis文档](http://www.mybatis.org/mybatis-3/)
 [后台模板](https://github.com/almasaeed2010/AdminLTE)
+
+#mybatis 文档
+[mybatis](http://www.mybatis.org/mybatis-3/zh/java-api.html)
