@@ -1,26 +1,8 @@
-
-${AnsiColor.GREEN}
-${AnsiColor.GREEN}                 _ooOoo_
-${AnsiColor.GREEN}                o8888888o
-${AnsiColor.GREEN}                88" . "88
-${AnsiColor.GREEN}                (| -_- |)
-${AnsiColor.GREEN}                O\  =  /O
-${AnsiColor.GREEN}             ____/`---'\____
-${AnsiColor.GREEN}           .'  \\|     |//  `.
-${AnsiColor.GREEN}          /  \\|||  :  |||//  \
-${AnsiColor.GREEN}         /  _||||| -:- |||||-  \
-${AnsiColor.GREEN}         |   | \\\  -  /// |   |
-${AnsiColor.GREEN}         | \_|  ''\---/''  |   |
-${AnsiColor.GREEN}         \  .-\__  `-`  ___/-. /
-${AnsiColor.GREEN}       ___`. .'  /--.--\  `. . __
-${AnsiColor.GREEN}    ."" '<  `.___\_<|>_/___.'  >'"".
-${AnsiColor.GREEN}   | | :  `- \`.;`\ _ /`;.`/ - ` : | |
-${AnsiColor.GREEN}   \  \ `-.   \_ __\ /__ _/   .-` /  /
-${AnsiColor.GREEN} ======`-.____`-.___\_____/___.-`____.-'======
-${AnsiColor.GREEN}                 `=---='
-${AnsiColor.GREEN} ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-${AnsiColor.GREEN}           佛祖保佑       永无BUG
-
-
+                              _____                                 _____                                                 __
+________ ____   ____    _____/ ____\____   ____    ____           _/ ____\___________    _____   ______  _  _____________|  | __
+\___   // __ \ /    \  / ___\   __\/ __ \ /    \  / ___\   ______ \   __\\_  __ \__  \  /     \_/ __ \ \/ \/ /  _ \_  __ \  |/ /
+ /    /\  ___/|   |  \/ /_/  >  | \  ___/|   |  \/ /_/  > /_____/  |  |   |  | \// __ \|  Y Y  \  ___/\     (  <_> )  | \/    <
+/_____ \\___  >___|  /\___  /|__|  \___  >___|  /\___  /           |__|   |__|  (____  /__|_|  /\___  >\/\_/ \____/|__|  |__|_ \
+      \/    \/     \//_____/           \/     \//_____/                              \/      \/     \/                        \/
 
 ${AnsiColor.BRIGHT_BLUE}:: zf-framework 🤓  :: Running Spring Boot ${spring-boot.version} ::
