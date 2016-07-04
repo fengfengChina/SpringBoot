@@ -1,25 +1,26 @@
 package com.zf.controller;
 
-import com.zf.domain.User;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import java.security.Principal;
 
 /**
  * UserController
  *
  * @author zf
- * @date 16/6/14
+ * @date 16/7/4
  */
-@RestController
+@Controller
+@RequestMapping("/user")
 public class UserController {
 
-
-    @RequestMapping("/users")
-    @ApiOperation(value="用户资料", notes="接口描述")
-    public String getUsers() {
-        return "1233333333";
+    @RequestMapping("/info")
+    public String info(Principal principal, ModelMap modelMap){
+        String name = principal.getName();
+        modelMap.put("name", name);
+        return "user/info";
     }
-
 }
+
