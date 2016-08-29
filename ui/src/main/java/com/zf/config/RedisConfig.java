@@ -30,7 +30,6 @@ import java.lang.reflect.Method;
  * @date 16/6/17
  */
 @Configuration
-
 @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
     @Autowired

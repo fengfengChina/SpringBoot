@@ -15,21 +15,19 @@ buildscript {
 apply plugin: 'spring-boot'
 apply plugin: 'java'
 apply plugin: 'idea'
-apply plugin: 'war'
 
-version = '0.1'
+
+
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-[compileJava,compileTestJava]*.options*.encoding = 'UTF-8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 repositories {
     mavenCentral()
 }
-war {
-    baseName = 'ui'
-}
+
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
@@ -38,14 +36,14 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-devtools'
 
-	compile 'mysql:mysql-connector-java'
+    compile 'mysql:mysql-connector-java'
 
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+//    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
     runtime 'org.hsqldb:hsqldb'
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
-    //	testRuntime 'org.hsqldb:hsqldb'
+    testRuntime 'org.hsqldb:hsqldb'
     compile 'org.springframework.boot:spring-boot-starter-redis'
     compile("io.springfox:springfox-swagger-ui:2.2.2")
     compile("io.springfox:springfox-swagger2:2.2.2")
@@ -56,6 +54,5 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.12'
 }
 
-//applicationDefaultJvmArgs = [ "-Xmx3550m","-Xms3550m","-Xmn2g","-Xss256k"]
 
 
